@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd ../.. && npm install && npm run build -w @planner/shared && npm run build -w @planner/ui && cd apps/web && npm run build",
-  "outputDirectory": ".next",
-  "installCommand": "echo 'Skipping install, handled in buildCommand'",
-  "framework": "nextjs"
+  "installCommand": "cd ../.. && npm install",
+  "buildCommand": "cd ../.. && npm run build -w @planner/shared && npm run build -w @planner/ui && cd apps/web && npm run build"
 }
