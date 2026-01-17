@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d0d0f;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-hover: #1f1f23;
+  --border: #27272a;
+  --muted: #71717a;
+  --accent: #8b5cf6;
+  --accent-light: #a78bfa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Priority colors */
+.priority-urgent {
+  --priority-color: #ef4444;
+}
+.priority-high {
+  --priority-color: #f97316;
+}
+.priority-medium {
+  --priority-color: #eab308;
+}
+.priority-low {
+  --priority-color: #94a3b8;
+}
+
+/* Status colors */
+.status-todo {
+  --status-color: #71717a;
+}
+.status-in_progress {
+  --status-color: #3b82f6;
+}
+.status-done {
+  --status-color: #22c55e;
+}
+.status-archived {
+  --status-color: #52525b;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
