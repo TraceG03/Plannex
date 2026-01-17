@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm install && npm run build -w @planner/shared && npm run build -w @planner/ui && npm run build -w @planner/web",
+  "outputDirectory": "apps/web/.next",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "ignoreCommand": "exit 0"
+}
